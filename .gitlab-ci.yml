@@ -1,0 +1,15 @@
+pages:
+  image: registry.gitlab.com/infai/ontoflow/ontoflow:main
+  services:
+    - docker:dind
+  stage: deploy
+  tags:
+    - docker
+  script:
+    - nextflow clone https://gitlab.com/infai/ontoflow -r main ontoflow
+    - nextflow run ontoflow
+  artifacts:
+    paths:
+    - public/
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "main" || $CI_COMMIT_BRANCH == "master"'
