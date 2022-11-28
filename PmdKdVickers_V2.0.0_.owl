@@ -1,0 +1,1165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+   xmlns:bfo="http://purl.obolibrary.org/obo/"
+   xmlns:cco="http://www.ontologyrepository.com/CommonCoreOntologies/"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:mseo="https://purl.matolab.org/mseo/mid/"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#UncertainityMethod1Function">
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/Algorithm"/>
+    <cco:designated_by rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#TestStandard"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CRMMeasuredVickersHardnessStandardDeviation">
+    <cco:is_input_of rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CalculateUncertainityOfTestingMachine"/>
+    <cco:is_measured_by rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#MeasurementOfCRMVickersHardnessStandardDeviation"/>
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/Hardness"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <cco:is_input_of rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CalculateUncertainityOfBias"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#ControlTemperature">
+    <cco:process_precedes rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#ChooseTestForce"/>
+    <cco:has_output rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#TestTemperature"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/ActOfMeasuring"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#TestTemperature">
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/Temperature"/>
+    <cco:is_measured_by rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#MeasurementOfTestTemperature"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#VickersHardnessStandardDeviation">
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/Hardness"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <cco:is_measured_by rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#MeasurementOfVickersHardnessStandardDeviation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CalculateFinalVickersHardnessAndUncertainity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://purl.matolab.org/mseo/mid/ActOfAnalysing"/>
+    <bfo:derives_into rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#FinalVickersHardnessAndUncertainity"/>
+    <cco:uses rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#SummationFunctionHardness"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#IndentationRegion3">
+    <rdf:type rdf:resource="https://purl.matolab.org/mseo/mid/MeasurementRegion"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <cco:designated_by rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#IndentationID3"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologyrepository.com/CommonCoreOntologies/ActOfLocationChange">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologyrepository.com/CommonCoreOntologies/NonNameIdentifier">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#ReferenceCRMConstant-t">
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/MeasurementInformationContentEntity"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CRMVickersHardness_NumberOfIndentations">
+    <cco:is_measured_by rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CRMVickersHardness_NumberOfIndentationsMeasurement"/>
+    <rdf:type rdf:resource="https://purl.matolab.org/mseo/mid/Number"/>
+    <cco:is_input_of rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CalculateUncertainityOfBias"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#VickersHardnessTestEquipmentID">
+    <bfo:has_part rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#VickersIndenter"/>
+    <bfo:has_part rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#VickersOpticalMeasuringSystem"/>
+    <rdf:type rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#VickersHardnessTestEquipment"/>
+    <bfo:has_part rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#VickersTestingMachine"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <bfo:contains rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CertifiedReferenceMaterialCRM"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CallibrationAccessory">
+    <rdfs:subClassOf rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/Artifact"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#IndentationRegion2">
+    <cco:designated_by rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#IndentationID2"/>
+    <rdf:type rdf:resource="https://purl.matolab.org/mseo/mid/MeasurementRegion"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#MeasurementOfIndentationDiagonalHorizontal1">
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/MeasurementInformationContentEntity"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#VickersOpticalMeasuringSystem">
+    <cco:hasFunction rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#VickersOpticalMeasuringSystemArtifactFunction"/>
+    <rdf:type rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#OpticalMeasuringSystem"/>
+    <cco:designated_by rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#VickersOpticalMeasuringSystemIdentifier"/>
+    <bfo:has_quality rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#VickersOpticalMeasuringSystemResolution"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#IndentationDiagonalHorizontal5">
+    <rdf:type rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#Diagonal"/>
+    <cco:is_input_of rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CalculateAverageDiagonal"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <cco:is_measured_by rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#MeasurementOfIndentationDiagonalHorizontal5"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CertifiedReferenceMaterialCRM">
+    <rdf:type rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CallibrationAccessory"/>
+    <cco:has_output rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CRMMeasuredVickersHardnessAverage"/>
+    <bfo:has_quality rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CRMConstant-t"/>
+    <cco:designated_by rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CRMIdentifier"/>
+    <bfo:has_quality rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#ReferenceCRMConstant-SigmaMS"/>
+    <cco:hasFunction rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CertifiedReferenceMaterialArtifactFunction"/>
+    <bfo:has_quality rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CRMCertifiedVickersHardnessUncertainity"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <cco:has_output rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CRMMeasuredVickersHardnessStandardDeviation"/>
+    <cco:has_output rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CRMVickersHardness_NumberOfIndentations"/>
+    <cco:has_output rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CRMVickersHardness_AverageDiagonal"/>
+    <bfo:has_quality rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CRMCertifiedVickersHardness"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#VickersIndenterArtifactFunction">
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/ArtifactFunction"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#IndentationDiagonalMean4">
+    <cco:is_input_of rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CalculateVickersHardness"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <cco:is_measured_by rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#MeasurementOfIndentationDiagonalMean4"/>
+    <cco:is_input_of rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#AverageFunctionTotalDiagonal"/>
+    <rdf:type rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#Diagonal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CalculateVickersHardnessUncertainity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <bfo:derives_into rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#VickersHardnessUncertainity"/>
+    <cco:process_precedes rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CalculateFinalVickersHardnessAndUncertainity"/>
+    <cco:uses rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#VickersHardnessUncertainityFunction"/>
+    <rdf:type rdf:resource="https://purl.matolab.org/mseo/mid/ActOfAnalysing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#VickersHardnessUncertainity">
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/DeviationMeasurementInformationContentEntity"/>
+    <cco:is_input_of rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CalculateFinalVickersHardnessAndUncertainity"/>
+    <cco:is_measured_by rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#MeasurementOfVickersHardnessUncertainty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#VickersHardnessTest_">
+    <mseo:in_accordance_with rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#TestStandard"/>
+    <cco:has_accessory rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#VickersHardnessTestEquipmentID"/>
+    <rdf:type rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#VickersHardnessTest"/>
+    <cco:has_output rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#TestDataFile"/>
+    <cco:occurs_on rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#TestDate"/>
+    <cco:process_started_by rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#VickersHardnessMeasurement"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <cco:has_input rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#VickersTestPiece"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#ApplyTestForce">
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/ActOfMeasuring"/>
+    <cco:has_accessory rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#VickersOpticalMeasuringSystem"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <cco:occures_on rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#LoadingTime"/>
+    <cco:process_precedes rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#OpticalMeasurementTheIndentationDiagonal"/>
+    <cco:is_cause_of rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#IndentationRegion3"/>
+    <cco:has_accessory rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#VickersTestingMachine"/>
+    <cco:is_cause_of rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#IndentationRegion1"/>
+    <cco:is_cause_of rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#IndentationRegion5"/>
+    <cco:is_cause_of rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#IndentationRegion2"/>
+    <cco:is_cause_of rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#IndentationRegion4"/>
+    <cco:has_accessory rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#VickersIndenter"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#VickersHardnessUncertainityFunction">
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/Algorithm"/>
+    <cco:designated_by rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#TestStandard"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#IndentationID3">
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/NonNameIdentifier"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#TestDateIdentifier">
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/CalendarDateIdentifier"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CalculateAverageDiagonal">
+    <bfo:derives_into rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#IndentationDiagonalMean2"/>
+    <cco:uses rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#AverageFunctionDiagonal"/>
+    <bfo:derives_into rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#IndentationDiagonalMean4"/>
+    <bfo:derives_into rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#IndentationDiagonalMean3"/>
+    <cco:process_precedes rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#AverageFunctionTotalDiagonal"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <bfo:derives_into rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#IndentationDiagonalMean5"/>
+    <bfo:derives_into rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#IndentationDiagonalMean1"/>
+    <rdf:type rdf:resource="https://purl.matolab.org/mseo/mid/ActOfAnalysing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CRMMeasuredVickersHardnessAverage">
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/Hardness"/>
+    <cco:is_input_of rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CalculateUncertainityOfTestingMachine"/>
+    <cco:is_input_of rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CalculateVickersHardnessBias"/>
+    <cco:is_measured_by rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#MeasurementOfCRMVickersHardnessAverage"/>
+    <cco:is_input_of rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CalculateUncertainityOfBias"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#IndentationDiagonalVertical1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <cco:is_measured_by rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#MeasurementOfIndentationDiagonalVertical1"/>
+    <rdf:type rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#Diagonal"/>
+    <cco:is_input_of rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CalculateAverageDiagonal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#VickersHardness3">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/Hardness"/>
+    <cco:is_input_of rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CalculateStandardDeviationVickersHardness"/>
+    <cco:is_input_of rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CalculateAverageVickersHardness"/>
+    <cco:is_measured_by rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#MeasurementOfVickersHardness3"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#ChooseTestForce">
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/ActOfMeasuring"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <cco:has_output rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#TestForce"/>
+    <cco:process_precedes rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#PositioningTestPiece"/>
+    <cco:has_accessory rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#VickersTestingMachine"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#VickersTestPiece">
+    <cco:hasFunction rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#VickersSpecimenFunction"/>
+    <cco:has_process_part rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#TestPieceManufacturing"/>
+    <cco:is_made_of rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CopperAlloy"/>
+    <cco:has_process_part rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#TestPiecePreparation"/>
+    <cco:designated_by rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#TestPieceIdentifier"/>
+    <rdf:type rdf:resource="https://purl.matolab.org/mseo/mid/Specimen"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#HardnessTestMachine">
+    <rdfs:subClassOf rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/Artifact"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#DistanceBetweenIndentations">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/DistanceMeasurementInformationContentEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#IndentationDiagonalHorizontal2">
+    <rdf:type rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#Diagonal"/>
+    <cco:is_input_of rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CalculateAverageDiagonal"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <cco:is_measured_by rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#MeasurementOfIndentationDiagonalHorizontal2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#VickersHardnessMeasurement">
+    <cco:has_process_part rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#ApplyTestForce"/>
+    <cco:is_measured_by rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#VickersHardnessTestEquipmentID"/>
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/ActOfMeasuring"/>
+    <cco:has_process_part rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#ChooseTestForce"/>
+    <bfo:has_part rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#VickersTestPiece"/>
+    <cco:process_precedes rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#VickersHardnessMeasurementAnalysis"/>
+    <cco:has_process_part rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#OpticalMeasurementTheIndentationDiagonal"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <cco:has_process_part rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#PositioningTestPiece"/>
+    <cco:has_process_part rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#ControlTemperature"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologyrepository.com/CommonCoreOntologies/Day">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#SummationFunctionHardness">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/Algorithm"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#OpticalMeasuringSystem">
+    <rdfs:subClassOf rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/Artifact"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#UncertainityOfTestingmachine">
+    <cco:is_input_of rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CalculateUncertainityMethod1"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/DeviationMeasurementInformationContentEntity"/>
+    <cco:is_measured_by rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#MeasurementOfUncertainityOfTestingMachine"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#TestPiecePreparation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <cco:has_output rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#TestPieceDimension"/>
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/ActOfArtifactProcessing"/>
+    <cco:designated_by rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#TestPiecePreparationMethod"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#IndentationRegion1">
+    <bfo:has_quality rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#IndentationDiagonalHorizontal1"/>
+    <bfo:has_quality rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#IndentationDiagonalVertical1"/>
+    <bfo:has_quality rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#IndentationDiagonalVertical2"/>
+    <bfo:has_quality rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#IndentationDiagonalHorizontal2"/>
+    <bfo:has_quality rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#IndentationDiagonalVertical4"/>
+    <bfo:has_quality rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#IndentationDiagonalVertical5"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <bfo:has_quality rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#IndentationDiagonalHorizontal5"/>
+    <cco:designated_by rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#IndentationID1"/>
+    <bfo:has_quality rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#IndentationDiagonalVertical3"/>
+    <bfo:has_quality rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#IndentationDiagonalHorizontal4"/>
+    <rdf:type rdf:resource="https://purl.matolab.org/mseo/mid/MeasurementRegion"/>
+    <bfo:has_quality rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#IndentationDiagonalHorizontal3"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#IndentationDiagonalVertical2">
+    <cco:is_input_of rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CalculateAverageDiagonal"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#Diagonal"/>
+    <cco:is_measured_by rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#MeasurementOfIndentationDiagonalVertical2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CRMCertifiedVickersHardness">
+    <cco:is_input_of rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CalculateVickersHardnessBias"/>
+    <cco:is_measured_by rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#ReferenceCRMCertifiedVickersHardness"/>
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/Hardness"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#MeasurementOfCRMVickersHardnessAverage">
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/MeasurementInformationContentEntity"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CalculateUncertainityOfTestingMachine">
+    <cco:process_precedes rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CalculateUncertainityOfIndentationResolution"/>
+    <rdf:type rdf:resource="https://purl.matolab.org/mseo/mid/ActOfAnalysing"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <cco:uses rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#UncertainityOfTestingMachineFunction"/>
+    <bfo:derives_into rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#UncertainityOfTestingmachine"/>
+    <cco:is_measured_by rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CertifiedReferenceMaterialCRM"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#LoadingTime">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/MultiSecondTemporalInterval"/>
+    <cco:is_measured_by rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#AppliedLoadingTime"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#OpticalMeasurementTheIndentationDiagonal">
+    <cco:has_accessory rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#VickersOpticalMeasuringSystem"/>
+    <cco:has_output rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#IndentationDiagonalHorizontal3"/>
+    <cco:has_output rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#IndentationDiagonalVertical4"/>
+    <cco:has_output rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#IndentationDiagonalVertical1"/>
+    <cco:has_output rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#IndentationDiagonalVertical2"/>
+    <cco:has_output rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#IndentationDiagonalHorizontal2"/>
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/ActOfMeasuring"/>
+    <cco:process_precedes rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CalculateAverageDiagonal"/>
+    <cco:has_output rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#IndentationDiagonalHorizontal5"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <cco:has_output rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#IndentationDiagonalHorizontal4"/>
+    <cco:has_output rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#IndentationDiagonalVertical3"/>
+    <cco:has_output rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#IndentationDiagonalHorizontal1"/>
+    <cco:has_output rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#IndentationDiagonalVertical5"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#">
+    <owl:versionInfo>2.0.0</owl:versionInfo>
+    <dc:creator>Hossein Beygi Nasrabadi</dc:creator>
+    <dc:creator>Birgit Skrotzki</dc:creator>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <dc:creator>Thomas Hanke</dc:creator>
+    <dc:title>Vickers Hardness Ontology</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CRMIdentifier">
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/NonNameIdentifier"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#MeasurementOfFinalVickersHardnessAndUncertainty">
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/MeasurementInformationContentEntity"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#TestDate">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/Day"/>
+    <cco:designated_by rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#TestDateIdentifier"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#IndentationDiagonalMean5">
+    <rdf:type rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#Diagonal"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <cco:is_measured_by rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#MeasurementOfIndentationDiagonalMean5"/>
+    <cco:is_input_of rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#AverageFunctionTotalDiagonal"/>
+    <cco:is_input_of rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CalculateVickersHardness"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologyrepository.com/CommonCoreOntologies/DeviationMeasurementInformationContentEntity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#IndentationDiagonalHorizontal1">
+    <cco:is_input_of rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CalculateAverageDiagonal"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#Diagonal"/>
+    <cco:is_measured_by rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#MeasurementOfIndentationDiagonalHorizontal1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#UncertainityOfBias">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/DeviationMeasurementInformationContentEntity"/>
+    <cco:is_measured_by rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#MeasurementOfUncertainityOfBias"/>
+    <cco:is_input_of rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CalculateUncertainityMethod1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#UncertainityOfindentationResolutionFunction">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/Algorithm"/>
+    <cco:designated_by rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#TestStandard"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#MeasurementOfIndentationDiagonalHorizontal5">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/MeasurementInformationContentEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#IndentationID1">
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/NonNameIdentifier"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#VickersHardnessUnit">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://qudt.org/2.1/schema/qudt/DerivedUnit"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#MeasurementOfIndentationDiagonalMean2">
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/MeasurementInformationContentEntity"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologyrepository.com/CommonCoreOntologies/has_part">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologyrepository.com/CommonCoreOntologies/is_input_of">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#Diagonal">
+    <rdfs:subClassOf rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/OneDimensionalExtent"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#IndentationsDistanceData">
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/DistanceMeasurementInformationContentEntity"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologyrepository.com/CommonCoreOntologies/ActOfAnalysing">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://purl.matolab.org/mseo/mid/File">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#IndentationID2">
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/NonNameIdentifier"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#ReferenceCRMVickersHardnessUncertainity">
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/MeasurementInformationContentEntity"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CalculateVickersHardnessBias">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <cco:process_precedes rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CalculateVickersHardnessUncertainity"/>
+    <cco:uses rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#VickersHardnessBiasFunction"/>
+    <cco:is_measured_by rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CertifiedReferenceMaterialCRM"/>
+    <rdf:type rdf:resource="https://purl.matolab.org/mseo/mid/ActOfAnalysing"/>
+    <bfo:derives_into rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#VickersHardnessBias"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#VickersIndenterIdentifier">
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/NonNameIdentifier"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#IndentationsDistanceID">
+    <rdf:type rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#DistanceBetweenIndentations"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <cco:is_measured_by rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#IndentationsDistanceData"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#IndentationDiagonalVertical5">
+    <cco:is_input_of rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CalculateAverageDiagonal"/>
+    <rdf:type rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#Diagonal"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <cco:is_measured_by rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#MeasurementOfIndentationDiagonalVertical5"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#FinalVickersHardnessAndUncertainity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <cco:is_measured_by rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#MeasurementOfFinalVickersHardnessAndUncertainty"/>
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/Hardness"/>
+    <cco:uses_measurement_unit rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#VickersHardnessUnit"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologyrepository.com/CommonCoreOntologies/MeasurementInformationContentEntity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#VickersHardnessMeasurementAnalysis">
+    <cco:has_process_part rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CalculateVickersHardnessBias"/>
+    <cco:has_process_part rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#AverageFunctionTotalDiagonal"/>
+    <cco:has_process_part rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CalculateFinalVickersHardnessAndUncertainity"/>
+    <cco:has_process_part rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CalculateVickersHardness"/>
+    <cco:has_process_part rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CalculateUncertainityMethod1"/>
+    <cco:has_process_part rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CalculateStandardDeviationVickersHardness"/>
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/ActOfAnalysing"/>
+    <cco:has_process_part rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CalculateAverageDiagonal"/>
+    <cco:has_process_part rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CalculateVickersHardnessUncertainity"/>
+    <cco:has_process_part rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CalculateUncertainityOfTestingMachine"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <cco:has_process_part rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CalculateAverageVickersHardness"/>
+    <cco:has_process_part rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CalculateUncertainityOfBias"/>
+    <cco:has_process_part rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CalculateUncertainityOfIndentationResolution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#TestStandardIdentifier">
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/NonNameIdentifier"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#MeasurementOfIndentationDiagonalHorizontal2">
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/MeasurementInformationContentEntity"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#MeasurementOfIndenterAngel">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/MeasurementInformationContentEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#IndentationDiagonalVertical3">
+    <cco:is_measured_by rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#MeasurementOfIndentationDiagonalVertical3"/>
+    <rdf:type rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#Diagonal"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <cco:is_input_of rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CalculateAverageDiagonal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#AverageFunctionTotalDiagonal">
+    <cco:uses rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#AverageFunctionTotalDiagonal"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <cco:process_precedes rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CalculateVickersHardness"/>
+    <rdf:type rdf:resource="https://purl.matolab.org/mseo/mid/ActOfAnalysing"/>
+    <bfo:derives_into rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#TotalIndentationDiagonalMean"/>
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/Algorithm"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#Resolution">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/Quality"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#MeasurementOfIndentationDiagonalMean3">
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/MeasurementInformationContentEntity"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://purl.matolab.org/mseo/mid/in_accordance_with">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CalculateVickersHardness">
+    <cco:process_precedes rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CalculateAverageVickersHardness"/>
+    <cco:uses rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#VickersHardnessFunction"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://purl.matolab.org/mseo/mid/ActOfAnalysing"/>
+    <bfo:derives_into rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#VickersHardness2"/>
+    <bfo:derives_into rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#VickersHardness5"/>
+    <bfo:derives_into rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#VickersHardness1"/>
+    <bfo:derives_into rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#VickersHardness3"/>
+    <bfo:derives_into rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#VickersHardness4"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#Producer">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <cco:designated_by rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#ProducerName"/>
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/Organisation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#VickersSpecimenFunction">
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/ArtifactFunction"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CalculateStandardDeviationVickersHardness">
+    <cco:process_precedes rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CalculateUncertainityOfTestingMachine"/>
+    <cco:uses rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#StandardDeviationFunctionHardness"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <bfo:derives_into rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#VickersHardnessStandardDeviation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#MeasurementOfIndentationDiagonalVertical2">
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/MeasurementInformationContentEntity"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#UncertainityMethod1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/DeviationMeasurementInformationContentEntity"/>
+    <cco:is_measured_by rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#MeasurementOfUncertainityMethod1"/>
+    <cco:is_input_of rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CalculateVickersHardnessUncertainity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#VickersIndenter">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <cco:hasFunction rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#VickersIndenterArtifactFunction"/>
+    <cco:is_made_of rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#Diamond"/>
+    <bfo:has_quality rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#DiamondIndenterShape"/>
+    <cco:designated_by rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#VickersIndenterIdentifier"/>
+    <rdf:type rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#Indenter"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#VickersTestingMachineArtifactFunction">
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/ArtifactFunction"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#DiamondIndenterShape">
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/ThreeDimensionalShape"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <bfo:has_quality rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#IndenterAngel"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#AverageFunctionHardness">
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/Algorithm"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#IndentationDiagonalMean1">
+    <cco:is_measured_by rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#MeasurementOfIndentationDiagonalMean1"/>
+    <rdf:type rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#Diagonal"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <cco:is_input_of rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#AverageFunctionTotalDiagonal"/>
+    <cco:is_input_of rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CalculateVickersHardness"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#VickersHardness2">
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/Hardness"/>
+    <cco:is_input_of rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CalculateAverageVickersHardness"/>
+    <cco:is_measured_by rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#MeasurementOfVickersHardness2"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <cco:is_input_of rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CalculateStandardDeviationVickersHardness"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#MeasurementOfVickersOpticalMeasuringSystemResolution">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/MeasurementInformationContentEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CRMCertifiedVickersHardnessUncertainity">
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/ReliabilityMeasurementInformationContentEntity"/>
+    <cco:is_input_of rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CalculateUncertainityOfBias"/>
+    <cco:is_measured_by rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#ReferenceCRMVickersHardnessUncertainity"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#MeasurementOfUncertainityOfIndentationResolution">
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/MeasurementInformationContentEntity"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologyrepository.com/CommonCoreOntologies/Organisation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#IndentationDiagonalHorizontal3">
+    <cco:is_input_of rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CalculateAverageDiagonal"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#Diagonal"/>
+    <cco:is_measured_by rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#MeasurementOfIndentationDiagonalHorizontal3"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#VickersHardness4">
+    <cco:is_input_of rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CalculateStandardDeviationVickersHardness"/>
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/Hardness"/>
+    <cco:is_measured_by rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#MeasurementOfVickersHardness4"/>
+    <cco:is_input_of rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CalculateAverageVickersHardness"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#UncertainityOfBiasFunction">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/Algorithm"/>
+    <cco:designated_by rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#TestStandard"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#IndenterMaterialCompositionIdentifier">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CalculateUncertainityOfBias">
+    <cco:uses rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#UncertainityOfBiasFunction"/>
+    <cco:is_measured_by rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CertifiedReferenceMaterialCRM"/>
+    <cco:process_precedes rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CalculateUncertainityMethod1"/>
+    <bfo:derives_into rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#UncertainityOfBias"/>
+    <rdf:type rdf:resource="https://purl.matolab.org/mseo/mid/ActOfAnalysing"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/derives_into">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#TestForce">
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/Force"/>
+    <cco:is_measured_by rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#AppliedTestForce"/>
+    <cco:is_input_of rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CalculateVickersHardness"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#IndentationID4">
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/NonNameIdentifier"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#TestPieceManufacturing">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <cco:has_part rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#TransportFromProducer"/>
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/ProcessHistory"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#MeasurementOfVickersHardnessBias">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/MeasurementInformationContentEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#VickersHardness1">
+    <cco:is_input_of rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CalculateStandardDeviationVickersHardness"/>
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/Hardness"/>
+    <cco:is_measured_by rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#MeasurementOfVickersHardness1"/>
+    <cco:is_input_of rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CalculateAverageVickersHardness"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#IndentationID5">
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/NonNameIdentifier"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#TestPieceCompositionIdentifier">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#MeasurementOfCRMVickersHardnessStandardDeviation">
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/MeasurementInformationContentEntity"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#VickersHardnessBias">
+    <cco:is_input_of rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CalculateVickersHardnessUncertainity"/>
+    <cco:is_measured_by rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#MeasurementOfVickersHardnessBias"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/DeviationMeasurementInformationContentEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#MeasurementOfIndentationDiagonalVertical4">
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/MeasurementInformationContentEntity"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#MeasurementOfVickersHardnessAverage">
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/MeasurementInformationContentEntity"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CRMVickersHardness_AverageDiagonal">
+    <rdf:type rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#Diagonal"/>
+    <cco:is_input_of rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CalculateUncertainityOfBias"/>
+    <cco:is_measured_by rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CRMVickersHardness_AverageDiagonalMeasurement"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologyrepository.com/CommonCoreOntologies/ArtifactFunction">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://purl.matolab.org/mseo/mid/Equipment">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologyrepository.com/CommonCoreOntologies/starts_at">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#IndentationDiagonalHorizontal4">
+    <cco:is_measured_by rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#MeasurementOfIndentationDiagonalHorizontal4"/>
+    <cco:is_input_of rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CalculateAverageDiagonal"/>
+    <rdf:type rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#Diagonal"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#VickersHardnessAverage">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <cco:is_input_of rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CalculateUncertainityOfIndentationResolution"/>
+    <cco:is_input_of rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CalculateFinalVickersHardnessAndUncertainity"/>
+    <cco:is_measured_by rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#MeasurementOfVickersHardnessAverage"/>
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/Hardness"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#MeasurementOfVickersHardness3">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/MeasurementInformationContentEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#MeasurementOfIndentationDiagonalMean5">
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/MeasurementInformationContentEntity"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#IndentationDiagonalVertical4">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <cco:is_input_of rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CalculateAverageDiagonal"/>
+    <cco:is_measured_by rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#MeasurementOfIndentationDiagonalVertical4"/>
+    <rdf:type rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#Diagonal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CalculateUncertainityOfIndentationResolution">
+    <cco:is_measured_by rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#MeasurementOfUncertainityOfIndentationResolution"/>
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/DeviationMeasurementInformationContentEntity"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <cco:uses rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#UncertainityOfindentationResolutionFunction"/>
+    <cco:is_input_of rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CalculateUncertainityMethod1"/>
+    <bfo:derives_into rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CalculateUncertainityOfIndentationResolution"/>
+    <rdf:type rdf:resource="https://purl.matolab.org/mseo/mid/ActOfAnalysing"/>
+    <cco:process_precedes rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CalculateUncertainityOfBias"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#ReferenceCRMConstant-SigmaMS">
+    <cco:is_input_of rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CalculateUncertainityOfIndentationResolution"/>
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/MeasurementInformationContentEntity"/>
+    <cco:is_input_of rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CalculateUncertainityOfBias"/>
+    <cco:is_measured_by rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#ReferenceCRMConstant-SigmaMS"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://purl.obolibrary.org/obo/Quality"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#VickersHardness5">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <cco:is_input_of rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CalculateStandardDeviationVickersHardness"/>
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/Hardness"/>
+    <cco:is_input_of rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CalculateAverageVickersHardness"/>
+    <cco:is_measured_by rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#MeasurementOfVickersHardness5"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#MeasurementOfIndentationDiagonalMean1">
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/MeasurementInformationContentEntity"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#IndenterAngel">
+    <cco:is_measured_by rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#MeasurementOfIndenterAngel"/>
+    <cco:is_input_of rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CalculateVickersHardness"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/SpatialOrientation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologyrepository.com/CommonCoreOntologies/Algorithm">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#IndentationRegion5">
+    <rdf:type rdf:resource="https://purl.matolab.org/mseo/mid/MeasurementRegion"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <cco:designated_by rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#IndentationID5"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#UncertainityOfTestingMachineFunction">
+    <cco:designated_by rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#TestStandard"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/Algorithm"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#MeasurementOfIndentationDiagonalVertical1">
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/MeasurementInformationContentEntity"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CertifiedReferenceMaterialArtifactFunction">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/ArtifactFunction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologyrepository.com/CommonCoreOntologies/SpatialOrientation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#TestStandard">
+    <rdf:type rdf:resource="https://purl.matolab.org/mseo/mid/Regulation"/>
+    <cco:designated_by rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#TestStandardIdentifier"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#TotalIndentationDiagonalMean">
+    <cco:is_input_of rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CalculateUncertainityOfIndentationResolution"/>
+    <rdf:type rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#Diagonal"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <cco:is_measured_by rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#MeasurementOfTotalIndentationDiagonalMean"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologyrepository.com/CommonCoreOntologies/ThreeDimensionalExtent">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#VickersOpticalMeasuringSystemIdentifier">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/NonNameIdentifier"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#PositioningTestPiece">
+    <cco:process_precedes rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#ApplyTestForce"/>
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/ActOfPositionChange"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <cco:has_output rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#IndentationEdgeDistanceID"/>
+    <cco:has_output rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#IndentationsDistanceID"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#ProducerName">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/DescriptiveInformationContentEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://qudt.org/2.1/schema/qudt/DerivedUnit">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologyrepository.com/CommonCoreOntologies/process_started_by">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CopperAlloy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/PortionOfMaterial"/>
+    <cco:designated_by rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#TestPieceCompositionIdentifier"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#AppliedLoadingTime">
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/MeasurementInformationContentEntity"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CalculateAverageVickersHardness">
+    <cco:process_precedes rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CalculateStandardDeviationVickersHardness"/>
+    <rdf:type rdf:resource="https://purl.matolab.org/mseo/mid/ActOfAnalysing"/>
+    <bfo:derives_into rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#VickersHardnessAverage"/>
+    <cco:uses rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#AverageFunctionHardness"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#MeasurementOfVickersHardness5">
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/MeasurementInformationContentEntity"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#VickersOpticalMeasuringSystemResolution">
+    <cco:is_measured_by rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#MeasurementOfVickersOpticalMeasuringSystemResolution"/>
+    <rdf:type rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#Resolution"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologyrepository.com/CommonCoreOntologies/occurs_on">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#TestPieceDimension">
+    <cco:is_measured_by rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#MeasurementOfTestPieceDimension"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/ThreeDimensionalExtent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#TestDateFileLocation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/DirectiveInformationContentEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologyrepository.com/CommonCoreOntologies/MultiSecondTemporalInterval">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#IndentationEdgeDistanceData">
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/DistanceMeasurementInformationContentEntity"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologyrepository.com/CommonCoreOntologies/DescriptiveInformationContentEntity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://purl.matolab.org/mseo/mid/Specimen">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#TestDataFile">
+    <cco:designated_by rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#TestDateFileLocation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="https://purl.matolab.org/mseo/mid/File"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologyrepository.com/CommonCoreOntologies/Hardness">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#IndentationDiagonalMean2">
+    <cco:is_measured_by rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#MeasurementOfIndentationDiagonalMean2"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <cco:is_input_of rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#AverageFunctionTotalDiagonal"/>
+    <cco:is_input_of rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CalculateVickersHardness"/>
+    <rdf:type rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#Diagonal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#VickersOpticalMeasuringSystemArtifactFunction">
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/ArtifactFunction"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#TransportFromProducer">
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/ActOfLocationChange"/>
+    <cco:starts_at rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#Producer"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CalculateUncertainityMethod1">
+    <cco:process_precedes rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CalculateVickersHardnessBias"/>
+    <rdf:type rdf:resource="https://purl.matolab.org/mseo/mid/ActOfAnalysing"/>
+    <bfo:derives_into rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#UncertainityMethod1"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#Diamond">
+    <cco:designated_by rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#IndenterMaterialCompositionIdentifier"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/PortionOfMaterial"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#VickersHardnessTestEquipment">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="https://purl.matolab.org/mseo/mid/Equipment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologyrepository.com/CommonCoreOntologies/ActOfMeasuring">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#MeasurementOfTestPieceDimension">
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/MeasurementInformationContentEntity"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/has_quality">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#MeasurementOfUncertainityOfTestingMachine">
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/MeasurementInformationContentEntity"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#VickersTestingMachine">
+    <cco:designated_by rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#VickersTestingMachineIdentifier"/>
+    <cco:hasFunction rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#VickersTestingMachineArtifactFunction"/>
+    <rdf:type rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#HardnessTestMachine"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologyrepository.com/CommonCoreOntologies/ThreeDimensionalShape">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CRMConstant-t">
+    <cco:is_input_of rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CalculateUncertainityOfBias"/>
+    <cco:is_measured_by rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#ReferenceCRMConstant-t"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://purl.obolibrary.org/obo/Quality"/>
+    <cco:is_input_of rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CalculateUncertainityOfTestingMachine"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#MeasurementOfVickersHardness1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/MeasurementInformationContentEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/has_part">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologyrepository.com/CommonCoreOntologies/DirectiveInformationContentEntity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://purl.matolab.org/mseo/mid/Expriment">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#MeasurementOfIndentationDiagonalVertical3">
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/MeasurementInformationContentEntity"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#MeasurementOfIndentationDiagonalVertical5">
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/MeasurementInformationContentEntity"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#MeasurementOfVickersHardnessUncertainty">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/MeasurementInformationContentEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#MeasurementOfTestTemperature">
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/MeasurementInformationContentEntity"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#DistanceBetweenIndentationAndEdge">
+    <rdfs:subClassOf rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/DistanceMeasurementInformationContentEntity"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#VickersHardnessFunction">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/Algorithm"/>
+    <cco:designated_by rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#TestStandard"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#Indenter">
+    <rdfs:subClassOf rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/Artifact"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#MeasurementOfIndentationDiagonalHorizontal4">
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/MeasurementInformationContentEntity"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#IndentationEdgeDistanceID">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <cco:is_measured_by rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#IndentationEdgeDistanceData"/>
+    <rdf:type rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#DistanceBetweenIndentationAndEdge"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologyrepository.com/CommonCoreOntologies/DistanceMeasurementInformationContentEntity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#MeasurementOfTotalIndentationDiagonalMean">
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/MeasurementInformationContentEntity"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologyrepository.com/CommonCoreOntologies/OneDimensionalExtent">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#MeasurementOfIndentationDiagonalHorizontal3">
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/MeasurementInformationContentEntity"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#VickersHardnessTest">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="https://purl.matolab.org/mseo/mid/Expriment"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologyrepository.com/CommonCoreOntologies/has_accessory">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologyrepository.com/CommonCoreOntologies/uses_measurement_unit">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologyrepository.com/CommonCoreOntologies/ReliabilityMeasurementInformationContentEntity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologyrepository.com/CommonCoreOntologies/occures_on">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#MeasurementOfVickersHardness4">
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/MeasurementInformationContentEntity"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologyrepository.com/CommonCoreOntologies/CalendarDateIdentifier">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologyrepository.com/CommonCoreOntologies/uses">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#StandardDeviationFunctionHardness">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/Algorithm"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#IndentationDiagonalMean3">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <cco:is_input_of rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#AverageFunctionTotalDiagonal"/>
+    <cco:is_input_of rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CalculateVickersHardness"/>
+    <cco:is_measured_by rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#MeasurementOfIndentationDiagonalMean3"/>
+    <rdf:type rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#Diagonal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://purl.matolab.org/mseo/mid/Regulation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologyrepository.com/CommonCoreOntologies/has_output">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologyrepository.com/CommonCoreOntologies/PortionOfMaterial">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#MeasurementOfUncertainityOfBias">
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/MeasurementInformationContentEntity"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#VickersHardnessBiasFunction">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <cco:designated_by rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#TestStandard"/>
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/Algorithm"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#MeasurementOfVickersHardnessStandardDeviation">
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/MeasurementInformationContentEntity"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologyrepository.com/CommonCoreOntologies/Force">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologyrepository.com/CommonCoreOntologies/ActOfArtifactProcessing">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#AverageFunctionDiagonal">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/Algorithm"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologyrepository.com/CommonCoreOntologies/process_precedes">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologyrepository.com/CommonCoreOntologies/has_input">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#TestPieceIdentifier">
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/NonNameIdentifier"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologyrepository.com/CommonCoreOntologies/is_made_of">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/contains">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#VickersTestingMachineIdentifier">
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/NonNameIdentifier"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://purl.matolab.org/mseo/mid/Number">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologyrepository.com/CommonCoreOntologies/has_process_part">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologyrepository.com/CommonCoreOntologies/designated_by">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#MeasurementOfIndentationDiagonalMean4">
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/MeasurementInformationContentEntity"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#MeasurementOfVickersHardness2">
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/MeasurementInformationContentEntity"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#IndentationRegion4">
+    <cco:designated_by rdf:resource="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#IndentationID4"/>
+    <rdf:type rdf:resource="https://purl.matolab.org/mseo/mid/MeasurementRegion"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologyrepository.com/CommonCoreOntologies/ActOfPositionChange">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://purl.matolab.org/mseo/mid/ActOfAnalysing">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologyrepository.com/CommonCoreOntologies/Temperature">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#ReferenceCRMCertifiedVickersHardness">
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/MeasurementInformationContentEntity"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CRMVickersHardness_AverageDiagonalMeasurement">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/MeasurementInformationContentEntity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#CRMVickersHardness_NumberOfIndentationsMeasurement">
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/MeasurementInformationContentEntity"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologyrepository.com/CommonCoreOntologies/ProcessHistory">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#TestPiecePreparationMethod">
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/DescriptiveInformationContentEntity"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologyrepository.com/CommonCoreOntologies/is_measured_by">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#AppliedTestForce">
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/MeasurementInformationContentEntity"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://gitlab.com/kupferdigital/ontologies/Vickers-hardness-test#MeasurementOfUncertainityMethod1">
+    <rdf:type rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/MeasurementInformationContentEntity"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://purl.matolab.org/mseo/mid/MeasurementRegion">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologyrepository.com/CommonCoreOntologies/is_cause_of">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologyrepository.com/CommonCoreOntologies/hasFunction">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ontologyrepository.com/CommonCoreOntologies/Artifact">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/Quality">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+</rdf:RDF>
