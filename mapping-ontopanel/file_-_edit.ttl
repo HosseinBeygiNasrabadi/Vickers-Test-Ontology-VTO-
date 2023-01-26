@@ -1,0 +1,71 @@
+@prefix bfo: <http://purl.obolibrary.org/obo/> .
+@prefix cco: <http://www.ontologyrepository.com/CommonCoreOntologies/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix kd: <https://gitlab.com/kupferdigital/process-graphs/vickers-hardness-test#> .
+@prefix mseo: <https://purl.matolab.org/mseo/mid/> .
+@prefix mto: <https://gitlab.com/kupferdigital/ontologies/Mechanical_Testing_Ontology/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+
+kd:VickersTestExperiment1 a owl:NamedIndividual,
+        mto:VickersHardnessTest ;
+    cco:has_accessory kd:VickersTestEquipment1 ;
+    cco:has_input kd:VickersTestPiece1 ;
+    mseo:in_accordance_with kd:TestStandard1 .
+    cco:process_started_by kd:VickersHardnessMeasurement1 ;
+
+kd:TestStandard1 a owl:NamedIndividual,
+        mseo:Regulation ;
+    cco:designated_by kd:TestStandardIdentifierDIN_EN_ISO_6507-1 .
+kd:TestStandardIdentifierDIN_EN_ISO_6507-1 a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+kd:VickersHardnessMeasurement1 a cco:ActOfMeasuring,
+        owl:NamedIndividual ;
+    bfo:has_part kd:VickersTestPiece1 ;
+    cco:is_measured_by kd:VickersTestEquipment1 ;
+    cco:process_precedes kd:VickersHardnessMeasurementAnalysis1 .
+
+kd:VickersHardnessMeasurementAnalysis1 a owl:NamedIndividual,
+        mseo:ActOfAnalysing ;
+    cco:has_process_part kd:CalculateAverageVickersHardness1,
+        kd:CalculateVickersHardnessUncertainity1,
+        kd:CalculateFinalVickersHardnessAndUncertainity1.
+
+kd:CalculateAverageVickersHardness1 a owl:NamedIndividual,
+        mseo:ActOfAnalysing ;
+    bfo:derives_into kd:VickersHardnessAverage1 .
+kd:VickersHardnessAverage1 a owl:NamedIndividual,
+        mto:VickersHardness ;
+    cco:is_input_of kd:CalculateFinalVickersHardnessAndUncertainity1 ;
+    cco:is_measured_by kd:MeasurementOfVickersHardnessAverage124.34 .
+kd:MeasurementOfVickersHardnessAverage124.34 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:CalculateVickersHardnessUncertainity1 a owl:NamedIndividual,
+        mto:DirectVerification ;
+    bfo:derives_into kd:VickersHardnessUncertainity1 ;
+    cco:process_precedes kd:CalculateFinalVickersHardnessAndUncertainity1 .
+kd:VickersHardnessUncertainity1 a owl:NamedIndividual,
+        mto:UncertaintyOfMeasurement ;
+    cco:is_input_of kd:CalculateFinalVickersHardnessAndUncertainity1 ;
+    cco:is_measured_by kd:MeasurementOfVickersHardnessUncertainty5.897432592312226 .
+kd:MeasurementOfVickersHardnessUncertainty5.897432592312226 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+kd:CalculateFinalVickersHardnessAndUncertainity1 a owl:NamedIndividual,
+        mseo:ActOfAnalysing ;
+    bfo:derives_into kd:FinalVickersHardnessAndUncertainity1 ;
+    cco:uses kd:SummationFunctionHardness .
+kd:FinalVickersHardnessAndUncertainity1 a owl:NamedIndividual,
+        mto:VickersHardness ;
+    cco:is_measured_by kd:MeasurementOfFinalvickersHardnessAndUncertainty124.3±5.9> .
+kd:MeasurementOfFinalvickersHardnessAndUncertainty124.3±5.9 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+
+
+
+
+
+
