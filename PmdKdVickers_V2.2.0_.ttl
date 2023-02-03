@@ -2,9 +2,9 @@
 @prefix cco: <http://www.ontologyrepository.com/CommonCoreOntologies/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix iof: <https://github.com/iofoundry/Core/> .
-@prefix kd: <https://gitlab.com/kupferdigital/process-graphs/vickers-hardness-test#> .
+@prefix kd: <https://gitlab.com/kupferdigital/process-graphs/vickers-hardness-test/-/raw/main/PmdKdVickers_V2.2.0_.ttl/> .
 @prefix mseo: <https://purl.matolab.org/mseo/mid/> .
-@prefix mto: <https://gitlab.com/kupferdigital/ontologies/Mechanical_Testing_Ontology/> .
+@prefix mto: <https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/-/raw/main/MTO_V2.1.3.ttl/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix qudt: <https://qudt.org/2.1/schema/qudt/> .
 
