@@ -4,9 +4,9 @@ Vickers Test Ontology (VTO) has developed for representing the Vickers testing p
 
 Versions info:
 
-V1 developed using BFO+CCO top-level ontologies.
+V2 developed using BFO+CCO top-level ontologies.
 
-V2 developed using BFO+IOF top-level ontologies.
+V3 developed using BFO+IOF top-level ontologies.
 
 ## Getting started
 
