@@ -1,6 +1,12 @@
 # Vickers Hardness-Test
 
-Process graph for the Vickers hardness testing according to the DIN_EN_ISO_6507-1 standard
+Vickers Test Ontology (VTO) has developed for representing the Vickers testing process, testing equipment requirements, test pieces charactristics, and related testing parameters and their measurement procedure according to DIN EN ISO 6507-1 standard.
+
+Versions info:
+
+V1 developed using BFO+CCO top-level ontologies.
+
+V2 developed using BFO+IOF top-level ontologies.
 
 ## Getting started
 
