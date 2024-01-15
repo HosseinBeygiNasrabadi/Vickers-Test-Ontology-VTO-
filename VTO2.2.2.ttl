@@ -1,0 +1,961 @@
+@prefix bfo: <http://purl.obolibrary.org/obo/> .
+@prefix cco: <http://www.ontologyrepository.com/CommonCoreOntologies/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix iof: <https://spec.industrialontologies.org/ontology/core/Core/> .
+@prefix mseo: <https://github.com/Mat-O-Lab/MSEO/raw/main/domain/util/readable_bfo_iris.ttl/> .
+@prefix mto: <https://gitlab.com/kupferdigital/ontologies/mechanical-testing-ontology/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vto: <https://gitlab.com/kupferdigital/process-graphs/vickers-hardness-test/> .
+
+bfo:contains a owl:ObjectProperty .
+
+bfo:derives_into a owl:ObjectProperty .
+
+bfo:has_function a owl:ObjectProperty .
+
+bfo:has_part a owl:ObjectProperty .
+
+bfo:has_quality a owl:ObjectProperty .
+
+cco:designated_by a owl:ObjectProperty .
+
+cco:has_accessory a owl:ObjectProperty .
+
+cco:has_agent a owl:ObjectProperty .
+
+cco:has_input a owl:ObjectProperty .
+
+cco:has_output a owl:ObjectProperty .
+
+cco:has_process_part a owl:ObjectProperty .
+
+cco:is_cause_of a owl:ObjectProperty .
+
+cco:is_input_of a owl:ObjectProperty .
+
+cco:is_made_of a owl:ObjectProperty .
+
+cco:is_measured_by a owl:ObjectProperty .
+
+cco:occurs_on a owl:ObjectProperty .
+
+cco:process_precedes a owl:ObjectProperty .
+
+cco:process_started_by a owl:ObjectProperty .
+
+cco:uses a owl:ObjectProperty .
+
+cco:uses_measurement_unit a owl:ObjectProperty .
+
+mseo:in_accordance_with a owl:ObjectProperty .
+
+vto: a owl:Ontology ;
+    dcterms:biblographicCitation "Hossein Beygi Nasrabadi, Birgit Skrotzki. (2024.01.15) Vickers Test Ontology (VTO). Version 2.2.2, www.gitlab.com/kupferdigital/process-graphs/vickers-hardness-test" ;
+    dcterms:created "2024.01.15" ;
+    dcterms:creator "Birgit Skrotzki",
+        "Hossein Beygi Nasrabadi (www.orcid.org/0000-0002-3092-0532)" ;
+    dcterms:licence "www.creativecommons.org/licenses/by/4.0/" ;
+    dcterms:title "Vickers Test Ontology (VTO)" ;
+    rdfs:comment "KuferDigital project (www.materialdigital.de/project/1)",
+        "Vickers Test Ontology (VTO) has developed for representing the Vickers testing process, testing equipment requirements, test pieces charactristics, and related testing parameters and their measurement procedure according to DIN EN ISO 6507-1 standard." ;
+    owl:versionInfo "2.2.2 (BFO, CCO, MSEO, MTO)" .
+
+vto:VickersTestExperiment a owl:NamedIndividual,
+        mto:VickersHardnessTest ;
+    cco:has_accessory vto:VickersTestEquipment ;
+    cco:has_input vto:VickersTestPiece ;
+    cco:has_output vto:TestDataFile ;
+    cco:occurs_on vto:TestDate ;
+    cco:process_started_by vto:VickersHardnessMeasurement ;
+    mseo:in_accordance_with vto:TestStandard .
+
+qudt:DerivedUnit a owl:Class .
+
+cco:ActOfArtifactProcessing a owl:Class .
+
+cco:ActOfPositionChange a owl:Class .
+
+cco:CalendarDateIdentifier a owl:Class .
+
+cco:Day a owl:Class .
+
+cco:DirectiveInformationContentEntity a owl:Class .
+
+cco:Force a owl:Class .
+
+cco:SpatialOrientation a owl:Class .
+
+cco:Temperature a owl:Class .
+
+cco:ThreeDimensionalExtent a owl:Class .
+
+cco:ThreeDimensionalShape a owl:Class .
+
+mseo:File a owl:Class .
+
+mseo:Number a owl:Class .
+
+mseo:Regulation a owl:Class .
+
+mseo:Specimen a owl:Class .
+
+mto:DistanceBetweenIndentationAndEdge a owl:Class .
+
+mto:DistanceBetweenIndentations a owl:Class .
+
+mto:HardnessTestMachine a owl:Class .
+
+mto:Indenter a owl:Class .
+
+mto:OpticalMeasuringSystem a owl:Class .
+
+mto:ReferenceBlock a owl:Class .
+
+mto:Resolution a owl:Class .
+
+mto:TestForceDuration a owl:Class .
+
+mto:VickersHardnessTest a owl:Class .
+
+mto:VickersHardnessTestEquipment a owl:Class .
+
+vto:AppliedLoadingTime a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+vto:AppliedTestForce a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+vto:AverageDiagonalOfIndentationOnCRM a owl:NamedIndividual,
+        mto:Diagonal ;
+    cco:is_input_of vto:CalculateUncertainityOfBias ;
+    cco:is_measured_by vto:MeasurementOfAverageDiagonalOfIndentationOnCRM .
+
+vto:AverageFunctionDiagonal a cco:Algorithm,
+        owl:NamedIndividual .
+
+vto:AverageFunctionHardness a cco:Algorithm,
+        owl:NamedIndividual .
+
+vto:AverageFunctionTotalDiagonal a cco:Algorithm,
+        owl:NamedIndividual .
+
+vto:CRMCertifiedVickersHardnessUncertainity a owl:NamedIndividual,
+        mto:UncertaintyOfMeasurement ;
+    cco:is_input_of vto:CalculateUncertainityOfBias ;
+    cco:is_measured_by vto:ReferenceCRMVickersHardnessUncertainity .
+
+vto:CRMCertifiedVickerslHardness a owl:NamedIndividual,
+        mto:VickersHardness ;
+    cco:is_input_of vto:CalculateVickersHardnessBias ;
+    cco:is_measured_by vto:ReferenceCRMCertifiedVickersHardness .
+
+vto:CRMConstant-t a cco:Amount,
+        owl:NamedIndividual ;
+    cco:is_input_of vto:CalculateUncertainityOfBias,
+        vto:CalculateUncertainityOfTestingMachine ;
+    cco:is_measured_by vto:ReferenceCRMConstant-t .
+
+vto:CRMIdentifier a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+vto:CRMMeasuredVickersHardnessAverage a owl:NamedIndividual,
+        mto:VickersHardness ;
+    cco:is_input_of vto:CalculateUncertainityOfBias,
+        vto:CalculateUncertainityOfTestingMachine,
+        vto:CalculateVickersHardnessBias ;
+    cco:is_measured_by vto:MeasurementOfCRMVickersHardnessAverage .
+
+vto:CRMMeasuredVickersHardnessStandardDeviation a owl:NamedIndividual,
+        mto:VickersHardness ;
+    cco:is_input_of vto:CalculateUncertainityOfBias,
+        vto:CalculateUncertainityOfTestingMachine ;
+    cco:is_measured_by vto:MeasurementOfCRMVickersHardnessStandardDeviation .
+
+vto:CertifiedReferenceMaterialArtifactFunction a cco:ArtifactFunction,
+        owl:NamedIndividual .
+
+vto:ControlTemperature a cco:ActOfMeasuring,
+        owl:NamedIndividual ;
+    cco:has_output vto:TestTemperature ;
+    cco:process_precedes vto:ChooseTestForce .
+
+vto:CopperAlloy a cco:PortionOfMaterial,
+        owl:NamedIndividual ;
+    cco:designated_by vto:TestPieceCompositionIdentifier .
+
+vto:Diamond a cco:PortionOfMaterial,
+        owl:NamedIndividual ;
+    cco:designated_by vto:IndenterMaterialCompositionIdentifier .
+
+vto:DiamondIndenterShape a cco:ThreeDimensionalShape,
+        owl:NamedIndividual ;
+    bfo:has_quality vto:IndenterAngel .
+
+vto:FinalVickersHardnessAndUncertainity a owl:NamedIndividual,
+        mto:VickersHardness ;
+    cco:is_measured_by vto:MeasurementOfFinalvickersHardnessAndUncertainty ;
+    cco:uses_measurement_unit vto:HV .
+
+vto:HV a qudt:DerivedUnit,
+        owl:NamedIndividual .
+
+vto:Indentation1 a owl:NamedIndividual,
+        mto:Indentation ;
+    bfo:has_quality vto:IndentationDiagonalHorizontal1,
+        vto:IndentationDiagonalVertical1 ;
+    cco:designated_by vto:IndentationID1 .
+
+vto:Indentation2 a owl:NamedIndividual,
+        mto:Indentation ;
+    bfo:has_quality vto:IndentationDiagonalHorizontal2,
+        vto:IndentationDiagonalVertical2 ;
+    cco:designated_by vto:IndentationID2 .
+
+vto:Indentation3 a owl:NamedIndividual,
+        mto:Indentation ;
+    bfo:has_quality vto:IndentationDiagonalHorizontal3,
+        vto:IndentationDiagonalVertical3 ;
+    cco:designated_by vto:IndentationID3 .
+
+vto:Indentation4 a owl:NamedIndividual,
+        mto:Indentation ;
+    bfo:has_quality vto:IndentationDiagonalHorizontal4,
+        vto:IndentationDiagonalVertical4 ;
+    cco:designated_by vto:IndentationID4 .
+
+vto:Indentation5 a owl:NamedIndividual,
+        mto:Indentation ;
+    bfo:has_quality vto:IndentationDiagonalHorizontal5,
+        vto:IndentationDiagonalVertical5 ;
+    cco:designated_by vto:IndentationID5 .
+
+vto:Indentation6 a owl:NamedIndividual,
+        mto:Indentation ;
+    bfo:has_quality vto:IndentationDiagonalHorizontal6,
+        vto:IndentationDiagonalVertical6 ;
+    cco:designated_by vto:IndentationID6 .
+
+vto:IndentationDiagonalMean1 a owl:NamedIndividual,
+        mto:Diagonal ;
+    cco:is_input_of vto:CalculateAverageTotalDiagonal,
+        vto:CalculateVickersHardness ;
+    cco:is_measured_by vto:MeasurementOfIndentationDiagonalMean1 .
+
+vto:IndentationDiagonalMean2 a owl:NamedIndividual,
+        mto:Diagonal ;
+    cco:is_input_of vto:CalculateAverageTotalDiagonal,
+        vto:CalculateVickersHardness ;
+    cco:is_measured_by vto:MeasurementOfIndentationDiagonalMean2 .
+
+vto:IndentationDiagonalMean3 a owl:NamedIndividual,
+        mto:Diagonal ;
+    cco:is_input_of vto:CalculateAverageTotalDiagonal,
+        vto:CalculateVickersHardness ;
+    cco:is_measured_by vto:MeasurementOfIndentationDiagonalMean3 .
+
+vto:IndentationDiagonalMean4 a owl:NamedIndividual,
+        mto:Diagonal ;
+    cco:is_input_of vto:CalculateAverageTotalDiagonal,
+        vto:CalculateVickersHardness ;
+    cco:is_measured_by vto:MeasurementOfIndentationDiagonalMean4 .
+
+vto:IndentationDiagonalMean5 a owl:NamedIndividual,
+        mto:Diagonal ;
+    cco:is_input_of vto:CalculateAverageTotalDiagonal,
+        vto:CalculateVickersHardness ;
+    cco:is_measured_by vto:MeasurementOfIndentationDiagonalMean5 .
+
+vto:IndentationDiagonalMean6 a owl:NamedIndividual,
+        mto:Diagonal ;
+    cco:is_input_of vto:CalculateAverageTotalDiagonal,
+        vto:CalculateVickersHardness ;
+    cco:is_measured_by vto:MeasurementOfIndentationDiagonalMean6 .
+
+vto:IndentationEdgeDistanceData a cco:DistanceMeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+vto:IndentationEdgeDistanceID a owl:NamedIndividual,
+        mto:DistanceBetweenIndentationAndEdge ;
+    cco:is_measured_by vto:IndentationEdgeDistanceData .
+
+vto:IndentationID1 a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+vto:IndentationID2 a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+vto:IndentationID3 a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+vto:IndentationID4 a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+vto:IndentationID5 a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+vto:IndentationID6 a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+vto:IndentationsDistanceData a cco:DistanceMeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+vto:IndentationsDistanceID a owl:NamedIndividual,
+        mto:DistanceBetweenIndentations ;
+    cco:is_measured_by vto:IndentationsDistanceData .
+
+vto:IndenterAngel a cco:SpatialOrientation,
+        owl:NamedIndividual ;
+    cco:is_input_of vto:CalculateVickersHardness ;
+    cco:is_measured_by vto:MeasurementOfIndenterAngel .
+
+vto:IndenterMaterialCompositionIdentifier a owl:NamedIndividual .
+
+vto:LoadingTime a owl:NamedIndividual,
+        mto:TestForceDuration ;
+    cco:is_measured_by vto:AppliedLoadingTime .
+
+vto:MaterialProvider a owl:NamedIndividual,
+        iof:MaterialResource ;
+    cco:designated_by vto:MaterialProviderName .
+
+vto:MaterialProviderName a cco:DescriptiveInformationContentEntity,
+        owl:NamedIndividual .
+
+vto:MeasurementOfAverageDiagonalOfIndentationOnCRM a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+vto:MeasurementOfCRMVickersHardnessAverage a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+vto:MeasurementOfCRMVickersHardnessStandardDeviation a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+vto:MeasurementOfFinalvickersHardnessAndUncertainty a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+vto:MeasurementOfIndentationDiagonalHorizontal1 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+vto:MeasurementOfIndentationDiagonalHorizontal2 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+vto:MeasurementOfIndentationDiagonalHorizontal3 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+vto:MeasurementOfIndentationDiagonalHorizontal4 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+vto:MeasurementOfIndentationDiagonalHorizontal5 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+vto:MeasurementOfIndentationDiagonalHorizontal6 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+vto:MeasurementOfIndentationDiagonalMean1 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+vto:MeasurementOfIndentationDiagonalMean2 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+vto:MeasurementOfIndentationDiagonalMean3 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+vto:MeasurementOfIndentationDiagonalMean4 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+vto:MeasurementOfIndentationDiagonalMean5 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+vto:MeasurementOfIndentationDiagonalMean6 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+vto:MeasurementOfIndentationDiagonalVertical1 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+vto:MeasurementOfIndentationDiagonalVertical2 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+vto:MeasurementOfIndentationDiagonalVertical3 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+vto:MeasurementOfIndentationDiagonalVertical4 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+vto:MeasurementOfIndentationDiagonalVertical5 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+vto:MeasurementOfIndentationDiagonalVertical6 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+vto:MeasurementOfIndenterAngel a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+vto:MeasurementOfNumberOfIndentationOnCRM a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+vto:MeasurementOfTestPieceDimension a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+vto:MeasurementOfTestTemperature a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+vto:MeasurementOfTotalIndentationDiagonalMean a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+vto:MeasurementOfUncertainityMethod1 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+vto:MeasurementOfUncertainityOfBias a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+vto:MeasurementOfUncertainityOfIndentationResolution a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+vto:MeasurementOfUncertainityOfTestingMachine a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+vto:MeasurementOfVickersHardness1 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+vto:MeasurementOfVickersHardness2 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+vto:MeasurementOfVickersHardness3 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+vto:MeasurementOfVickersHardness4 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+vto:MeasurementOfVickersHardness5 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+vto:MeasurementOfVickersHardness6 a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+vto:MeasurementOfVickersHardnessAverage a owl:NamedIndividual .
+
+vto:MeasurementOfVickersHardnessBias a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+vto:MeasurementOfVickersHardnessStandardDeviation a owl:NamedIndividual .
+
+vto:MeasurementOfVickersHardnessUncertainty a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+vto:MeasurinentOfOpticalMeasuringSystemResolution a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+vto:NumberOfIndentationOnCRM a owl:NamedIndividual,
+        mseo:Number ;
+    cco:is_input_of vto:CalculateUncertainityOfBias ;
+    cco:is_measured_by vto:MeasurementOfNumberOfIndentationOnCRM .
+
+vto:ReferenceCRMCertifiedVickersHardness a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+vto:ReferenceCRMConstant-t a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+vto:ReferenceCRMVickersHardnessUncertainity a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+vto:StandardDeviationFunctionHardness a cco:Algorithm,
+        owl:NamedIndividual .
+
+vto:SummationFunctionHardness a cco:Algorithm,
+        owl:NamedIndividual ;
+    cco:designated_by vto:TestStandard .
+
+vto:TestDataFile a owl:NamedIndividual,
+        mseo:File ;
+    cco:designated_by vto:TestDateFileLocation .
+
+vto:TestDate a cco:Day,
+        owl:NamedIndividual ;
+    cco:designated_by vto:TestDateIdentifier .
+
+vto:TestDateFileLocation a cco:DirectiveInformationContentEntity,
+        owl:NamedIndividual .
+
+vto:TestDateIdentifier a cco:CalendarDateIdentifier,
+        owl:NamedIndividual .
+
+vto:TestForce a cco:Force,
+        owl:NamedIndividual ;
+    cco:is_input_of vto:CalculateVickersHardness ;
+    cco:is_measured_by vto:AppliedTestForce .
+
+vto:TestPieceCompositionIdentifier a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+vto:TestPieceDimension a cco:ThreeDimensionalExtent,
+        owl:NamedIndividual ;
+    cco:designated_by vto:MeasurementOfTestPieceDimension .
+
+vto:TestPieceIndenter a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+vto:TestPieceManufacturing a owl:NamedIndividual,
+        iof:ManufacturingProcess ;
+    bfo:has_part vto:TransportFromProducer .
+
+vto:TestPiecePreparation a cco:ActOfArtifactProcessing,
+        owl:NamedIndividual ;
+    cco:designated_by vto:TestPiecePreparationMethod .
+
+vto:TestPiecePreparationMethod a cco:DescriptiveInformationContentEntity,
+        owl:NamedIndividual .
+
+vto:TestStandardIdentifier a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+vto:TestTemperature a cco:Temperature,
+        owl:NamedIndividual ;
+    cco:is_measured_by vto:MeasurementOfTestTemperature .
+
+vto:TotalIndentationDiagonalMean a owl:NamedIndividual,
+        mto:Diagonal ;
+    cco:is_input_of vto:CalculateUncertainityOfIndentationResolution ;
+    cco:is_measured_by vto:MeasurementOfTotalIndentationDiagonalMean .
+
+vto:TransportFromProducer a owl:NamedIndividual,
+        iof:TransportProcess ;
+    cco:has_agent vto:MaterialProvider .
+
+vto:UncertainityMethod1 a owl:NamedIndividual,
+        mto:UncertaintyOfMeasurement ;
+    cco:is_input_of vto:CalculateVickersHardnessUncertainity ;
+    cco:is_measured_by vto:MeasurementOfUncertainityMethod1 .
+
+vto:UncertainityMethod1Function a cco:Algorithm,
+        owl:NamedIndividual ;
+    cco:designated_by vto:TestStandard .
+
+vto:UncertainityOfBias a owl:NamedIndividual,
+        mto:UncertaintyOfMeasurement ;
+    cco:is_input_of vto:CalculateUncertainityMethod1 ;
+    cco:is_measured_by vto:MeasurementOfUncertainityOfBias .
+
+vto:UncertainityOfBiasFunction a cco:Algorithm,
+        owl:NamedIndividual ;
+    cco:designated_by vto:TestStandard .
+
+vto:UncertainityOfIndentationResulution a owl:NamedIndividual,
+        mto:UncertaintyOfMeasurement ;
+    cco:is_input_of vto:CalculateUncertainityMethod1 ;
+    cco:is_measured_by vto:MeasurementOfUncertainityOfIndentationResolution .
+
+vto:UncertainityOfTestingMachine a owl:NamedIndividual,
+        mto:UncertaintyOfMeasurement ;
+    cco:is_input_of vto:CalculateUncertainityMethod1 ;
+    cco:is_measured_by vto:MeasurementOfUncertainityOfTestingMachine .
+
+vto:UncertainityOfTestingMachineFunction a cco:Algorithm,
+        owl:NamedIndividual ;
+    cco:designated_by vto:TestStandard .
+
+vto:UncertainityOfindentationResolutionFunction a cco:Algorithm,
+        owl:NamedIndividual ;
+    cco:designated_by vto:TestStandard .
+
+vto:VickersHardness1 a owl:NamedIndividual,
+        mto:VickersHardness ;
+    cco:is_input_of vto:CalculateAverageVickersHardness,
+        vto:CalculateStandardDeviationVickersHardness ;
+    cco:is_measured_by vto:MeasurementOfVickersHardness1 .
+
+vto:VickersHardness2 a owl:NamedIndividual,
+        mto:VickersHardness ;
+    cco:is_input_of vto:CalculateAverageVickersHardness,
+        vto:CalculateStandardDeviationVickersHardness ;
+    cco:is_measured_by vto:MeasurementOfVickersHardness2 .
+
+vto:VickersHardness3 a owl:NamedIndividual,
+        mto:VickersHardness ;
+    cco:is_input_of vto:CalculateAverageVickersHardness,
+        vto:CalculateStandardDeviationVickersHardness ;
+    cco:is_measured_by vto:MeasurementOfVickersHardness3 .
+
+vto:VickersHardness4 a owl:NamedIndividual,
+        mto:VickersHardness ;
+    cco:is_input_of vto:CalculateAverageVickersHardness,
+        vto:CalculateStandardDeviationVickersHardness ;
+    cco:is_measured_by vto:MeasurementOfVickersHardness4 .
+
+vto:VickersHardness5 a owl:NamedIndividual,
+        mto:VickersHardness ;
+    cco:is_input_of vto:CalculateAverageVickersHardness,
+        vto:CalculateStandardDeviationVickersHardness ;
+    cco:is_measured_by vto:MeasurementOfVickersHardness5 .
+
+vto:VickersHardness6 a owl:NamedIndividual,
+        mto:VickersHardness ;
+    cco:is_input_of vto:CalculateAverageVickersHardness,
+        vto:CalculateStandardDeviationVickersHardness ;
+    cco:is_measured_by vto:MeasurementOfVickersHardness6 .
+
+vto:VickersHardnessAverage a owl:NamedIndividual,
+        mto:VickersHardness ;
+    cco:is_input_of vto:CalculateFinalVickersHardnessAndUncertainity,
+        vto:CalculateUncertainityOfIndentationResolution ;
+    cco:is_measured_by vto:MeasurementOfVickersHardnessAverage .
+
+vto:VickersHardnessBias a owl:NamedIndividual,
+        mto:UncertaintyOfMeasurement ;
+    cco:is_input_of vto:CalculateVickersHardnessUncertainity ;
+    cco:is_measured_by vto:MeasurementOfVickersHardnessBias .
+
+vto:VickersHardnessBiasFunction a cco:Algorithm,
+        owl:NamedIndividual ;
+    cco:designated_by vto:TestStandard .
+
+vto:VickersHardnessFunction a cco:Algorithm,
+        owl:NamedIndividual ;
+    cco:designated_by vto:TestStandard .
+
+vto:VickersHardnessMeasurement a cco:ActOfMeasuring,
+        owl:NamedIndividual ;
+    bfo:has_part vto:VickersTestPiece ;
+    cco:has_process_part vto:ApplyTestForce,
+        vto:ChooseTestForce,
+        vto:ControlTemperature,
+        vto:MeasuringIndentationDiagonal,
+        vto:PositioningTestPiece ;
+    cco:is_measured_by vto:VickersTestEquipment ;
+    cco:process_precedes vto:VickersHardnessMeasurementAnalysis .
+
+vto:VickersHardnessMeasurementAnalysis a owl:NamedIndividual,
+        mseo:ActOfAnalysing ;
+    cco:has_process_part vto:CalculateAverageDiagonal,
+        vto:CalculateAverageTotalDiagonal,
+        vto:CalculateAverageVickersHardness,
+        vto:CalculateFinalVickersHardnessAndUncertainity,
+        vto:CalculateStandardDeviationVickersHardness,
+        vto:CalculateUncertainityMethod1,
+        vto:CalculateUncertainityOfBias,
+        vto:CalculateUncertainityOfIndentationResolution,
+        vto:CalculateUncertainityOfTestingMachine,
+        vto:CalculateVickersHardness,
+        vto:CalculateVickersHardnessBias,
+        vto:CalculateVickersHardnessUncertainity .
+
+vto:VickersHardnessStandardDeviation a owl:NamedIndividual,
+        mto:VickersHardness ;
+    cco:is_measured_by vto:MeasurementOfVickersHardnessStandardDeviation .
+
+vto:VickersHardnessUncertainity a owl:NamedIndividual,
+        mto:UncertaintyOfMeasurement ;
+    cco:is_input_of vto:CalculateFinalVickersHardnessAndUncertainity ;
+    cco:is_measured_by vto:MeasurementOfVickersHardnessUncertainty .
+
+vto:VickersHardnessUncertainityFunction a cco:Algorithm,
+        owl:NamedIndividual ;
+    cco:designated_by vto:TestStandard .
+
+vto:VickersIndenterArtifactFunction a cco:ArtifactFunction,
+        owl:NamedIndividual .
+
+vto:VickersIndenterIdentifier a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+vto:VickersOpticalMeasuringSystemArtifactFunction a cco:ArtifactFunction,
+        owl:NamedIndividual .
+
+vto:VickersOpticalMeasuringSystemIdentifier a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+vto:VickersOpticalMeasuringSystemResolution a owl:NamedIndividual,
+        mto:Resolution ;
+    cco:is_measured_by vto:MeasurinentOfOpticalMeasuringSystemResolution .
+
+vto:VickersTestPieceFunction a cco:ArtifactFunction,
+        owl:NamedIndividual .
+
+vto:VickersTestingMachineArtifactFunction a cco:ArtifactFunction,
+        owl:NamedIndividual .
+
+vto:VickersTestingMachineIdentifier a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+iof:ManufacturingProcess a owl:Class .
+
+iof:MaterialResource a owl:Class .
+
+iof:TransportProcess a owl:Class .
+
+cco:Amount a owl:Class .
+
+cco:DescriptiveInformationContentEntity a owl:Class .
+
+cco:DistanceMeasurementInformationContentEntity a owl:Class .
+
+cco:PortionOfMaterial a owl:Class .
+
+vto:ApplyTestForce a cco:ActOfMeasuring,
+        owl:NamedIndividual ;
+    cco:has_accessory vto:VickersIndenter,
+        vto:VickersOpticalMeasuringSystem,
+        vto:VickersTestingMachine ;
+    cco:is_cause_of vto:Indentation1,
+        vto:Indentation2,
+        vto:Indentation3,
+        vto:Indentation4,
+        vto:Indentation5,
+        vto:Indentation6 ;
+    cco:occurs_on vto:LoadingTime ;
+    cco:process_precedes vto:MeasuringIndentationDiagonal .
+
+vto:ChooseTestForce a cco:ActOfMeasuring,
+        owl:NamedIndividual ;
+    cco:has_accessory vto:VickersTestingMachine ;
+    cco:has_output vto:TestForce ;
+    cco:process_precedes vto:PositioningTestPiece .
+
+vto:IndentationDiagonalHorizontal1 a owl:NamedIndividual,
+        mto:Diagonal ;
+    cco:is_input_of vto:CalculateAverageDiagonal ;
+    cco:is_measured_by vto:MeasurementOfIndentationDiagonalHorizontal1 .
+
+vto:IndentationDiagonalHorizontal2 a owl:NamedIndividual,
+        mto:Diagonal ;
+    cco:is_input_of vto:CalculateAverageDiagonal ;
+    cco:is_measured_by vto:MeasurementOfIndentationDiagonalHorizontal2 .
+
+vto:IndentationDiagonalHorizontal3 a owl:NamedIndividual,
+        mto:Diagonal ;
+    cco:is_input_of vto:CalculateAverageDiagonal ;
+    cco:is_measured_by vto:MeasurementOfIndentationDiagonalHorizontal3 .
+
+vto:IndentationDiagonalHorizontal4 a owl:NamedIndividual,
+        mto:Diagonal ;
+    cco:is_input_of vto:CalculateAverageDiagonal ;
+    cco:is_measured_by vto:MeasurementOfIndentationDiagonalHorizontal4 .
+
+vto:IndentationDiagonalHorizontal5 a owl:NamedIndividual,
+        mto:Diagonal ;
+    cco:is_input_of vto:CalculateAverageDiagonal ;
+    cco:is_measured_by vto:MeasurementOfIndentationDiagonalHorizontal5 .
+
+vto:IndentationDiagonalHorizontal6 a owl:NamedIndividual,
+        mto:Diagonal ;
+    cco:is_input_of vto:CalculateAverageDiagonal ;
+    cco:is_measured_by vto:MeasurementOfIndentationDiagonalHorizontal6 .
+
+vto:IndentationDiagonalVertical1 a owl:NamedIndividual,
+        mto:Diagonal ;
+    cco:is_input_of vto:CalculateAverageDiagonal ;
+    cco:is_measured_by vto:MeasurementOfIndentationDiagonalVertical1 .
+
+vto:IndentationDiagonalVertical2 a owl:NamedIndividual,
+        mto:Diagonal ;
+    cco:is_input_of vto:CalculateAverageDiagonal ;
+    cco:is_measured_by vto:MeasurementOfIndentationDiagonalVertical2 .
+
+vto:IndentationDiagonalVertical3 a owl:NamedIndividual,
+        mto:Diagonal ;
+    cco:is_input_of vto:CalculateAverageDiagonal ;
+    cco:is_measured_by vto:MeasurementOfIndentationDiagonalVertical3 .
+
+vto:IndentationDiagonalVertical4 a owl:NamedIndividual,
+        mto:Diagonal ;
+    cco:is_input_of vto:CalculateAverageDiagonal ;
+    cco:is_measured_by vto:MeasurementOfIndentationDiagonalVertical4 .
+
+vto:IndentationDiagonalVertical5 a owl:NamedIndividual,
+        mto:Diagonal ;
+    cco:is_input_of vto:CalculateAverageDiagonal ;
+    cco:is_measured_by vto:MeasurementOfIndentationDiagonalVertical5 .
+
+vto:IndentationDiagonalVertical6 a owl:NamedIndividual,
+        mto:Diagonal ;
+    cco:is_input_of vto:CalculateAverageDiagonal ;
+    cco:is_measured_by vto:MeasurementOfIndentationDiagonalVertical6 .
+
+vto:MeasuringIndentationDiagonal a cco:ActOfMeasuring,
+        owl:NamedIndividual ;
+    cco:has_accessory vto:VickersOpticalMeasuringSystem ;
+    cco:has_output vto:IndentationDiagonalHorizontal1,
+        vto:IndentationDiagonalHorizontal2,
+        vto:IndentationDiagonalHorizontal3,
+        vto:IndentationDiagonalHorizontal4,
+        vto:IndentationDiagonalHorizontal5,
+        vto:IndentationDiagonalHorizontal6,
+        vto:IndentationDiagonalVertical1,
+        vto:IndentationDiagonalVertical2,
+        vto:IndentationDiagonalVertical3,
+        vto:IndentationDiagonalVertical4,
+        vto:IndentationDiagonalVertical5,
+        vto:IndentationDiagonalVertical6 ;
+    cco:process_precedes vto:CalculateAverageDiagonal .
+
+vto:PositioningTestPiece a cco:ActOfPositionChange,
+        owl:NamedIndividual ;
+    cco:has_output vto:IndentationEdgeDistanceID,
+        vto:IndentationsDistanceID ;
+    cco:process_precedes vto:ApplyTestForce .
+
+vto:ReferenceCRMConstant-SigmaMS a cco:Amount,
+        cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual ;
+    cco:is_input_of vto:CalculateUncertainityOfBias,
+        vto:CalculateUncertainityOfIndentationResolution ;
+    cco:is_measured_by vto:ReferenceCRMConstant-SigmaMS .
+
+vto:VickersIndenter a owl:NamedIndividual,
+        mto:Indenter ;
+    bfo:has_function vto:VickersIndenterArtifactFunction ;
+    bfo:has_quality vto:DiamondIndenterShape ;
+    cco:designated_by vto:VickersIndenterIdentifier ;
+    cco:is_made_of vto:Diamond .
+
+vto:VickersTestEquipment a owl:NamedIndividual,
+        mto:VickersHardnessTestEquipment ;
+    bfo:contains vto:CertifiedReferenceMaterialCRM ;
+    bfo:has_part vto:VickersIndenter,
+        vto:VickersOpticalMeasuringSystem,
+        vto:VickersTestingMachine .
+
+vto:VickersTestPiece a owl:NamedIndividual,
+        mseo:Specimen ;
+    bfo:has_function vto:VickersTestPieceFunction ;
+    cco:designated_by vto:TestPieceIndenter ;
+    cco:has_output vto:TestPieceDimension ;
+    cco:has_process_part vto:TestPieceManufacturing,
+        vto:TestPiecePreparation ;
+    cco:is_made_of vto:CopperAlloy .
+
+vto:VickersOpticalMeasuringSystem a owl:NamedIndividual,
+        mto:OpticalMeasuringSystem ;
+    bfo:has_function vto:VickersOpticalMeasuringSystemArtifactFunction ;
+    bfo:has_quality vto:VickersOpticalMeasuringSystemResolution ;
+    cco:designated_by vto:VickersOpticalMeasuringSystemIdentifier .
+
+vto:VickersTestingMachine a owl:NamedIndividual,
+        mto:HardnessTestMachine ;
+    bfo:has_function vto:VickersTestingMachineArtifactFunction ;
+    cco:designated_by vto:VickersTestingMachineIdentifier .
+
+vto:CalculateFinalVickersHardnessAndUncertainity a owl:NamedIndividual,
+        mseo:ActOfAnalysing ;
+    bfo:derives_into vto:FinalVickersHardnessAndUncertainity ;
+    cco:uses vto:SummationFunctionHardness .
+
+vto:CalculateVickersHardnessBias a owl:NamedIndividual,
+        mto:DirectVerification ;
+    bfo:derives_into vto:VickersHardnessBias ;
+    cco:process_precedes vto:CalculateVickersHardnessUncertainity ;
+    cco:uses vto:VickersHardnessBiasFunction .
+
+vto:CalculateVickersHardnessUncertainity a owl:NamedIndividual,
+        mto:DirectVerification ;
+    bfo:derives_into vto:VickersHardnessUncertainity ;
+    cco:process_precedes vto:CalculateFinalVickersHardnessAndUncertainity ;
+    cco:uses vto:VickersHardnessUncertainityFunction .
+
+vto:CertifiedReferenceMaterialCRM a owl:NamedIndividual,
+        mto:ReferenceBlock ;
+    bfo:has_function vto:CertifiedReferenceMaterialArtifactFunction ;
+    bfo:has_quality vto:AverageDiagonalOfIndentationOnCRM,
+        vto:CRMCertifiedVickersHardnessUncertainity,
+        vto:CRMCertifiedVickerslHardness,
+        vto:CRMConstant-t,
+        vto:NumberOfIndentationOnCRM,
+        vto:ReferenceCRMConstant-SigmaMS ;
+    cco:designated_by vto:CRMIdentifier ;
+    cco:has_output vto:CRMMeasuredVickersHardnessAverage,
+        vto:CRMMeasuredVickersHardnessStandardDeviation .
+
+cco:ActOfMeasuring a owl:Class .
+
+cco:ArtifactFunction a owl:Class .
+
+vto:CalculateUncertainityMethod1 a owl:NamedIndividual,
+        mto:DirectVerification ;
+    bfo:derives_into vto:UncertainityMethod1 ;
+    cco:is_measured_by vto:CertifiedReferenceMaterialCRM ;
+    cco:process_precedes vto:CalculateVickersHardnessBias ;
+    cco:uses vto:UncertainityMethod1Function .
+
+vto:CalculateUncertainityOfIndentationResolution a owl:NamedIndividual,
+        mto:DirectVerification ;
+    bfo:derives_into vto:UncertainityOfIndentationResulution ;
+    cco:process_precedes vto:CalculateUncertainityOfBias ;
+    cco:uses vto:UncertainityOfindentationResolutionFunction .
+
+vto:CalculateUncertainityOfTestingMachine a owl:NamedIndividual,
+        mto:DirectVerification ;
+    bfo:derives_into vto:UncertainityOfTestingMachine ;
+    cco:is_measured_by vto:CertifiedReferenceMaterialCRM ;
+    cco:process_precedes vto:CalculateUncertainityOfIndentationResolution ;
+    cco:uses vto:UncertainityOfTestingMachineFunction .
+
+mseo:ActOfAnalysing a owl:Class .
+
+mto:DirectVerification a owl:Class .
+
+mto:Indentation a owl:Class .
+
+mto:UncertaintyOfMeasurement a owl:Class .
+
+vto:CalculateAverageTotalDiagonal a owl:NamedIndividual,
+        mseo:ActOfAnalysing ;
+    bfo:derives_into vto:TotalIndentationDiagonalMean ;
+    cco:process_precedes vto:CalculateVickersHardness ;
+    cco:uses vto:AverageFunctionTotalDiagonal .
+
+vto:CalculateAverageVickersHardness a owl:NamedIndividual,
+        mseo:ActOfAnalysing ;
+    bfo:derives_into vto:VickersHardnessAverage ;
+    cco:process_precedes vto:CalculateStandardDeviationVickersHardness ;
+    cco:uses vto:AverageFunctionHardness .
+
+vto:CalculateStandardDeviationVickersHardness a owl:NamedIndividual ;
+    bfo:derives_into vto:VickersHardnessStandardDeviation ;
+    cco:process_precedes vto:CalculateUncertainityOfTestingMachine ;
+    cco:uses vto:StandardDeviationFunctionHardness .
+
+vto:CalculateUncertainityOfBias a owl:NamedIndividual,
+        mto:DirectVerification ;
+    bfo:derives_into vto:UncertainityOfBias ;
+    cco:is_measured_by vto:CertifiedReferenceMaterialCRM ;
+    cco:process_precedes vto:CalculateUncertainityMethod1 ;
+    cco:uses vto:UncertainityOfBiasFunction .
+
+vto:TestStandard a owl:NamedIndividual,
+        mseo:Regulation ;
+    cco:designated_by vto:TestStandardIdentifier .
+
+vto:CalculateVickersHardness a owl:NamedIndividual,
+        mseo:ActOfAnalysing ;
+    bfo:derives_into vto:VickersHardness1,
+        vto:VickersHardness2,
+        vto:VickersHardness3,
+        vto:VickersHardness4,
+        vto:VickersHardness5,
+        vto:VickersHardness6 ;
+    cco:process_precedes vto:CalculateAverageVickersHardness ;
+    cco:uses vto:VickersHardnessFunction .
+
+cco:Algorithm a owl:Class .
+
+mto:VickersHardness a owl:Class .
+
+cco:NonNameIdentifier a owl:Class .
+
+vto:CalculateAverageDiagonal a owl:NamedIndividual,
+        mseo:ActOfAnalysing ;
+    bfo:derives_into vto:IndentationDiagonalMean1,
+        vto:IndentationDiagonalMean2,
+        vto:IndentationDiagonalMean3,
+        vto:IndentationDiagonalMean4,
+        vto:IndentationDiagonalMean5,
+        vto:IndentationDiagonalMean6 ;
+    cco:process_precedes vto:CalculateAverageTotalDiagonal ;
+    cco:uses vto:AverageFunctionDiagonal .
+
+mto:Diagonal a owl:Class .
+
+cco:MeasurementInformationContentEntity a owl:Class .
+
